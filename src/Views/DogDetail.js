@@ -28,7 +28,7 @@ export default function Home() {
     getDogsById(id).then(({ data }) => setInfo(data));
   }, [id]);
 
-  if (loading) return <h1> holder </h1>;
+  if (loading) return <h1> Welcome for considering helping a lost dog </h1>;
 
   return (
     <div>

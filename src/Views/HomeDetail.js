@@ -24,7 +24,7 @@ export default function Home() {
   //   getDogsById(id).then(({ data }) => setCards(data));
   // }, [id]);
 
-  if (loading) return <h1> holder </h1>;
+  if (loading) return <h1> Say Hello to you new Best Friend </h1>;
 
   return (
     <div>

@@ -8,7 +8,7 @@ function App() {
     <main className="container">
       <BrowserRouter>
         <header>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">HOME</NavLink>
         </header>
         <Switch>
           <Route exact path="/">
