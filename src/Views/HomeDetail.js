@@ -15,7 +15,7 @@ export default function Home() {
       const data = await fetchDogs(id);
       setCards(data);
       setLoading(false);
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, [id]);

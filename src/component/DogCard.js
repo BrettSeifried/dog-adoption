@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function DogCard({ dog }) {
-  console.log(dog);
+  // console.log(dog);
   return (
     <div className="dog-card">
       {dog.map(({ id, name, image, breed }) => (
