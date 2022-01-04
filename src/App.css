@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.card-render {
+  display: flex;
+  flex-direction: row;
+  border: 2px black solid;
+  width: 25%;
+  height: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+.dog-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
