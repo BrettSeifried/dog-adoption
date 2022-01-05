@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
 import DogCard from '../component/DogCard';
 import { fetchDogs } from '../services/DogRoute';
 import { useEffect, useState } from 'react';
-import { getDogsById } from '../services/DogRoute';
 import { useParams } from 'react-router-dom';
 
 export default function Home() {
