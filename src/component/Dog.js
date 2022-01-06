@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function DogInfo({ id, name, image, age, breed, bio }) {
+export default function DogInfo({ id, name, image, age, breed, bio, handleDelete }) {
   //   console.log(dog);
   return (
     <div className="dog-info">
@@ -13,7 +13,10 @@ export default function DogInfo({ id, name, image, age, breed, bio }) {
             {age} Year old {breed}
           </h3>
           <p>{bio}</p>
-          <Link to={`/dogs/${id}/edit`}> Edit </Link>
+          <button>
+            <Link to={`/dogs/${id}/edit`}> Edit </Link>
+          </button>
+          <button onClick={handleDelete}>Delete</button>
         </section>
       </>
     </div>

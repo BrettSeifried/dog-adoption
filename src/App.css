@@ -80,3 +80,11 @@ img {
 body {
   background-color: antiquewhite;
 }
+
+button {
+  margin: 10px;
+  background-color: rgb(110, 2, 2);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+}
