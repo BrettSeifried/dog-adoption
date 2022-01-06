@@ -8,6 +8,8 @@ export default function Home() {
   const [info, setInfo] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
+
   // TRANSLATE TO ASYNC WAIT
   useEffect(() => {
     getDogsById(id)

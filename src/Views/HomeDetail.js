@@ -1,10 +1,10 @@
 import DogCard from '../component/DogCard';
 import { fetchDogs } from '../services/DogRoute';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
 export default function Home() {
-  const { id } = useParams();
+  // const { id } = useParams();
   const [card, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
 

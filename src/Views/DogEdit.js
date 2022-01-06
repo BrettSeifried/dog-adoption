@@ -24,7 +24,7 @@ export default function DogEdit() {
       setBreed(data.breed);
       setImage(data.image);
       setLoading(false);
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, [params.id]);
