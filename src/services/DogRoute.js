@@ -12,11 +12,21 @@ export async function fetchDogs() {
 }
 
 export async function getDogsById(id) {
-  let request = await client.from('dogs').select().match({ id }).single();
-  return checkError(request);
+  let response = await client.from('dogs').select().match({ id }).single();
+  return checkError(response);
 }
 
 export async function updateDog(id, name, age, bio, image, breed) {
-  const request = await client.from('dogs').update({ name, bio, age, image, breed }).eq('id', id);
-  return checkError(request);
+  const response = await client.from('dogs').update({ age, bio, name, image, breed }).eq('id', id);
+  return checkError(response);
 }
+
+export async function addDog(name, age, bio, image, breed) {
+  const response = await client.from('dogs').insert({ age, bio, name, image, breed });
+  return checkError(response);
+}
+
+// export async function deleteDog(id) {
+//   const response = await client.from('dogs').delete().match({ id });
+//   return checkError(response);
+// }
