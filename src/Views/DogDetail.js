@@ -4,7 +4,7 @@
 //   return <h2> Test Dog Detail</h2>;
 // }
 import DogInfo from '../component/Dog';
-import { fetchDogs } from '../services/DogRoute';
+// import { fetchDogs } from '../services/DogRoute';
 import { useEffect, useState } from 'react';
 import { getDogsById } from '../services/DogRoute';
 import { useParams } from 'react-router-dom';
@@ -14,18 +14,11 @@ export default function Home() {
   const [info, setInfo] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // TRANSLATE TO ASYNC WAIT
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchDogs(id);
-      setInfo(data);
-      setLoading(false);
-      // console.log(data);
-    };
-    fetchData();
-  }, [id]);
-
-  useEffect(() => {
-    getDogsById(id).then(({ data }) => setInfo(data));
+    getDogsById(id)
+      .then((data) => setInfo(data))
+      .finally(() => setLoading(false));
   }, [id]);
 
   if (loading) return <h1> Welcome for considering helping a lost dog </h1>;
@@ -33,7 +26,7 @@ export default function Home() {
   return (
     <div>
       <ul>
-        <DogInfo dog={info} />
+        <DogInfo {...info} />
       </ul>
     </div>
   );

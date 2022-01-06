@@ -1,12 +1,11 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function DogInfo({ dog }) {
+export default function DogInfo({ id, name, image, age, breed, bio }) {
   //   console.log(dog);
   return (
     <div className="dog-info">
-      {dog.map(({ name, image, age, breed, bio }) => (
-        // <Link to={`/dogs/${id}`} key={id} className="card-render">
+      <>
         <section key="dogInfo" className="dog-text">
           <h1>{name}</h1>
           <img alt="dog" src={`${image}`}></img>
@@ -14,9 +13,9 @@ export default function DogInfo({ dog }) {
             {age} Year old {breed}
           </h3>
           <p>{bio}</p>
+          <Link to={`/dogs/${id}/edit`}> Edit </Link>
         </section>
-        // </Link>
-      ))}
+      </>
     </div>
   );
 }

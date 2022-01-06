@@ -10,17 +10,13 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetchDogs(id);
+      const data = await fetchDogs();
       setCards(data);
       setLoading(false);
       // console.log(data);
     };
     fetchData();
-  }, [id]);
-
-  // useEffect(() => {
-  //   getDogsById(id).then(({ data }) => setCards(data));
-  // }, [id]);
+  }, []);
 
   if (loading) return <h1> Say Hello to you new Best Friend </h1>;
 

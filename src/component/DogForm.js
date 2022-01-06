@@ -1,6 +1,18 @@
 import React from 'react';
 
-export default function DogForm({ name, breed, bio, age, image }) {
+export default function DogForm({
+  name,
+  setName,
+  breed,
+  setBreed,
+  bio,
+  setBio,
+  age,
+  setAge,
+  image,
+  setImage,
+  handleSubmit,
+}) {
   return (
     <div className="form">
       <form>
@@ -59,6 +71,9 @@ export default function DogForm({ name, breed, bio, age, image }) {
               setImage(e.target.value);
             }}
           ></input>
+        </div>
+        <div>
+          <button onClick={handleSubmit}>Add</button>
         </div>
       </form>
     </div>
