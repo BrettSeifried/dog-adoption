@@ -25,10 +25,8 @@ export default function Home() {
   if (loading) return <h1> Say Hello to you new Best Friend </h1>;
 
   return (
-    <div>
-      <ul>
-        <DogCard dog={card} />
-      </ul>
-    </div>
+    <ul>
+      <DogCard dog={card} />
+    </ul>
   );
 }
