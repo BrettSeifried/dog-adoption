@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import DogForm from '../component/DogForm';
 import { addDog } from '../services/DogRoute';
+import { useHistory } from 'react-router-dom';
 
 export default function DogCreate() {
   const [name, setName] = useState('');
@@ -9,13 +10,20 @@ export default function DogCreate() {
   const [age, setAge] = useState('');
   const [breed, setBreed] = useState('');
   const [image, setImage] = useState('');
+  const history = useHistory();
   //   const [loading, setLoading] = useState(true);
 
   //   const params = useParams();
 
   const handleSubmit = async (e) => {
+    try {
+      alert('You Updated the Data');
+    } catch {
+      alert('Data update Failed');
+    }
     e.preventDefault();
     await addDog(name, age, bio, image, breed);
+    history.push('/');
   };
 
   //   if (loading) return <h1>Data Base is eating lunch. BRB</h1>;
