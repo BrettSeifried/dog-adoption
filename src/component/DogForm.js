@@ -16,7 +16,7 @@ export default function DogForm({
   return (
     <div className="form">
       <form>
-        <h2>New Dog Name</h2>
+        <h3>Dog Edit Form</h3>
         <div className="dog-info">
           <label>Name</label>
           <input

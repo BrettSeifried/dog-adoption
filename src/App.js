@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Views/HomeDetail';
 import DogDetail from './Views/DogDetail';
 import Header from './component/Header';
-// import DogForm from './component/DogForm';
 import DogEdit from './Views/DogEdit';
 import DogCreate from './Views/DogAdmin';
 

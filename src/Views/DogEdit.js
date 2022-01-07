@@ -4,6 +4,7 @@ import DogForm from '../component/DogForm';
 import { updateDog } from '../services/DogRoute';
 import { useParams } from 'react-router-dom';
 import { getDogsById } from '../services/DogRoute';
+import { useHistory } from 'react-router-dom';
 
 export default function DogEdit() {
   const [name, setName] = useState('');
@@ -12,6 +13,7 @@ export default function DogEdit() {
   const [breed, setBreed] = useState('');
   const [image, setImage] = useState('');
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   const params = useParams();
 
@@ -32,8 +34,14 @@ export default function DogEdit() {
   if (loading) return <h1>Data Base is eating lunch. BRB</h1>;
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    await updateDog(params.id, name, age, bio, image, breed);
+    try {
+      e.preventDefault();
+      const redir = await updateDog(params.id, name, age, bio, image, breed);
+      alert('You editied the info!');
+      history.push(`/dogs/${redir[0].id}`);
+    } catch {
+      alert('Data failed to upload');
+    }
   };
 
   return (

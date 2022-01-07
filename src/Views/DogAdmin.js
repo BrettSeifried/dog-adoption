@@ -11,22 +11,23 @@ export default function DogCreate() {
   const [breed, setBreed] = useState('');
   const [image, setImage] = useState('');
   const history = useHistory();
-  //   const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   //   const params = useParams();
 
   const handleSubmit = async (e) => {
     try {
-      alert('You Updated the Data');
+      alert('You Added a dog');
     } catch {
-      alert('Data update Failed');
+      alert('Data failed to upload');
     }
     e.preventDefault();
     await addDog(name, age, bio, image, breed);
     history.push('/');
+    // setLoading(false);
   };
 
-  //   if (loading) return <h1>Data Base is eating lunch. BRB</h1>;
+  // if (loading) return <h1>Data Base is eating lunch. BRB</h1>;
 
   return (
     <div>
