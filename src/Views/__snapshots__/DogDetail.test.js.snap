@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render individual Dog 1`] = `
+<div>
+  <ul>
+    <div
+      class="dog-info"
+    >
+      <section
+        class="dog-text"
+      >
+        <h1>
+          Cato
+        </h1>
+        <img
+          alt="dog"
+          src="https://placedog.net/1000/563?id=199"
+        />
+        <h3>
+          6
+           Year old 
+          Terrier
+        </h3>
+        <p>
+          Loves to eat all poo poo
+        </p>
+        <button>
+          <a
+            href="/dogs/2/edit"
+          >
+             Edit 
+          </a>
+        </button>
+        <button>
+          Delete
+        </button>
+      </section>
+    </div>
+  </ul>
+</div>
+`;

@@ -17,12 +17,12 @@ export default function DogCreate() {
 
   const handleSubmit = async (e) => {
     try {
+      await addDog(name, age, bio, image, breed);
       alert('You Added a dog');
     } catch {
       alert('Data failed to upload');
     }
     e.preventDefault();
-    await addDog(name, age, bio, image, breed);
     history.push('/');
     // setLoading(false);
   };
