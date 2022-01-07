@@ -12,7 +12,6 @@ export default function DogCreate() {
   //   const [loading, setLoading] = useState(true);
 
   //   const params = useParams();
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
