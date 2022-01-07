@@ -2,11 +2,13 @@ import DogInfo from '../component/Dog';
 import { useEffect, useState } from 'react';
 import { deleteDog, getDogsById } from '../services/DogRoute';
 import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Home() {
   const { id } = useParams();
   const [info, setInfo] = useState([]);
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   // TRANSLATE TO ASYNC WAIT
   useEffect(() => {
@@ -18,6 +20,7 @@ export default function Home() {
   const handleDelete = async (e) => {
     e.preventDefault();
     await deleteDog(id);
+    history.push('/');
   };
 
   if (loading) return <h1> Welcome for considering helping a lost dog </h1>;
