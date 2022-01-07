@@ -59,6 +59,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  text-decoration: none;
 }
 
 .dog-info {
@@ -77,6 +78,11 @@ img {
   align-items: center;
 }
 
+.card-render {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   background-color: antiquewhite;
 }
@@ -87,4 +93,13 @@ button {
   color: white;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.name {
+  text-transform: uppercase;
 }
