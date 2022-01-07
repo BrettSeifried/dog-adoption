@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Views/HomeDetail';
 import DogDetail from './Views/DogDetail';
 import Header from './component/Header';
