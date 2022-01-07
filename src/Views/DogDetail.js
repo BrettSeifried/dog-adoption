@@ -18,13 +18,13 @@ export default function Home() {
   }, [id]);
 
   const handleDelete = async (e) => {
+    e.preventDefault();
     try {
       await deleteDog(id);
       alert('You have deleted a dog.');
     } catch {
       alert('Delete failed');
     }
-    e.preventDefault();
     history.push('/');
   };
 

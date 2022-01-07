@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the dog's information in a form 1`] = `
+<div>
+  <h1>
+    Data Base is eating lunch. BRB
+  </h1>
+  <div>
+    <h1>
+      Add a Dog
+    </h1>
+    <div
+      class="form"
+    >
+      <form>
+        <h3>
+          Dog Edit Form
+        </h3>
+        <div
+          class="dog-info"
+        >
+          <label>
+            Name
+          </label>
+          <input
+            placeholder="name"
+            type="text"
+            value="Cato"
+          />
+        </div>
+        <div
+          class="dog-info"
+        >
+          <label>
+            Breed
+          </label>
+          <input
+            placeholder="Breed"
+            type="text"
+            value="Terrier"
+          />
+        </div>
+        <div
+          class="dog-info"
+        >
+          <label>
+            Age
+          </label>
+          <input
+            placeholder="Age"
+            type="number"
+            value="6"
+          />
+        </div>
+        <div
+          class="dog-info"
+        >
+          <label>
+            Bio
+          </label>
+          <input
+            placeholder="Description of the Dog"
+            type="text"
+            value="Loves to eat all poo"
+          />
+        </div>
+        <div
+          class="dog-info"
+        >
+          <label>
+            Image URL
+          </label>
+          <input
+            placeholder="Image URL Address"
+            type="text"
+            value="https://placedog.net/1000/563?id=199"
+          />
+        </div>
+        <div>
+          <button>
+            Add/Edit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

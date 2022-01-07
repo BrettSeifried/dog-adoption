@@ -22,7 +22,7 @@ exports[`Should render individual Dog 1`] = `
           Terrier
         </h3>
         <p>
-          Loves to eat all poo poo
+          Loves to eat all poo
         </p>
         <button>
           <a
